@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo HTTP</title>
+</head>
+<body>
+    
+    <h1>Protocolo HTTP</h1>
+    <p>
+        O protocolo HTTP (HyperText Transfer Protocol) funciona como um idioma comum de comunicação entre o seu navegador (cliente) e o servidor onde um site está hospedado.
+        Quando você digita um endereço ou clica em um link, o navegador envia uma mensagem chamada requisição HTTP para o servidor, solicitando os dados daquela página. O servidor processa esse pedido e devolve uma resposta HTTP, que traz o conteúdo do site (textos, imagens e estruturas HTML) ou avisa sobre algum erro (como o famoso erro 404 de página não encontrada).
+        A característica principal do HTTP é o modelo de cliente-servidor baseado em pedido e resposta: o navegador sempre toma a iniciativa de pedir, e o servidor responde enviando as informações necessárias para que a página seja desenhada e exibida na sua tela.
+    </p>
+
+    <h2>Cliente, servidor, requisição e resposta</h2>
+    <p>
+        A comunicação na Web funciona como um diálogo constante entre duas partes: o cliente e o servidor.
+        O cliente é a ponta que faz o pedido — na maioria das vezes, o seu navegador de internet (como Chrome, Firefox ou Edge) rodando no seu computador ou celular. Quando você digita um site ou clica em um botão, o cliente monta e envia uma requisição, que é uma mensagem solicitando um recurso específico, como uma página HTML, uma imagem ou dados de um formulário.
+        O servidor, por sua vez, é um computador de alta performance ligado à rede e configurado para guardar os arquivos e processar a lógica dos sites. Assim que ele recebe essa requisição do cliente, ele interpreta o pedido, busca as informações necessárias no seu sistema e devolve uma resposta. Essa resposta traz os dados solicitados (que o navegador usa para desenhar a página na tela) junto com um código indicando se tudo deu certo ou se ocorreu algum erro na busca.
+    </p>
+
+    <h2>Método GET e POST</h2>
+    <p>
+        O método GET serve exclusivamente para buscar ou recuperar informações do servidor. Ele não altera os dados existentes. A sua principal característica é que os dados ou parâmetros da busca são enviados diretamente na URL da página. Por ficarem visíveis na barra de endereços, as requisições GET podem ser salvas nos favoritos do navegador e compartilhadas facilmente, mas nunca devem ser usadas para enviar dados sensíveis, como senhas ou dados bancários.
+        O método POST serve para enviar ou criar novos dados no servidor, como no envio de um formulário de cadastro, login ou uma publicação. Ao contrário do GET, os dados enviados pelo POST vão escondidos dentro do corpo (body) da requisição, não aparecendo na URL. Isso o torna mais seguro para envio de informações confidenciais e permite o tráfego de conteúdos bem maiores, como upload de arquivos e fotos.
+    </p>
+
+    <h2>Exemplo Requisição HTTP</h2>
+    <pre>
+    GET /historia_web.html HTTP/1.1
+    Host: www.meusite.com.br
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+    Accept: text/html,application/xhtml+xml
+    Accept-Language: pt-BR,pt;q=0.9
+    </pre>
+
+    <h2>Exemplo de Resposta HTTP</h2>
+    <pre>
+    HTTP/1.1 200 OK
+    Date: Tue, 06 Oct 2026 14:35:00 GMT
+    Server: Apache/2.4.52 (Ubuntu)
+    Content-Type: text/html; charset=UTF-8
+    Content-Length: 1250
+    </pre>
+
+    <h2>Explicação de Status HTTP</h2>
+    <ul>
+        <li><strong>200 OK:</strong> Indica que a requisição foi bem-sucedida. O servidor encontrou o recurso solicitado e o entregou corretamente ao navegador.</li>
+        <li><strong>301 Moved Permanently:</strong> É um código de redirecionamento permanente. Avisa ao navegador que a página ou recurso mudou para um novo endereço de forma definitiva e que as futuras requisições devem ser feitas diretamente na nova URL.</li>
+        <li><strong>400 Bad Request:</strong> Indica um erro do cliente. Significa que o servidor não conseguiu entender a requisição porque ela veio com dados inválidos, sintaxe incorreta ou parâmetros corrompidos.</li>
+        <li><strong>403 Forbidden:</strong> Significa acesso proibido. O servidor entendeu a requisição do cliente, mas se recusa a autorizar a exibição da página (por falta de permissão de acesso, como tentar entrar em uma área restrita sem permissão de administrador).</li>
+        <li><strong>404 Not Found:</strong> É o famoso erro de recurso não encontrado. O servidor está no ar e funcionando, mas não encontrou o arquivo ou a página específica solicitada na URL digitada.</li>
+        <li><strong>500 Internal Server Error:</strong> Indica um erro interno do servidor. Significa que o problema ocorreu do lado do servidor (como uma falha no código de fundo ou no banco de dados) ao tentar processar o pedido do cliente.</li>
+    </ul>
+
+</body>
+</html>

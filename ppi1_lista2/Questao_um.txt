@@ -1,0 +1,20 @@
+1)
+
+Uma regra CSS é uma instrução para mudar o visual da página web. Ela divide-se em três partes:
+
+Seletor: Quem vai ser alterado.
+
+Propriedade: O que vai ser alterado (ex: cor).
+
+Valor: Como vai ficar (ex: vermelho).
+
+Exemplo:
+
+h1 {
+  color: red;
+}
+
+
+
+
+

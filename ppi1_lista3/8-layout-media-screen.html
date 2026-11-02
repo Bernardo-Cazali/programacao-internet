@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        *{
+            margin: 0px
+        }
+        #container {
+            display: grid;
+            grid-template-columns: 0.5fr 2fr 1fr 1.5fr;
+            grid-template-rows: 1fr 1.5fr 1.5fr;
+            grid-template-areas: 
+            "lateral dois   dois   tres"
+            "lateral quatro cinco  tres"
+            "seis    seis   sete   sete";
+            height: 100vh;
+            gap: 10px;
+        }
+        #principal{
+            display: contents;
+        }
+        #lateral{
+            display: grid;
+            grid-area: lateral;
+            grid-template-columns: 1fr;
+            grid-template-rows: 50px 50px 50px 50px;
+            justify-items: center;
+            align-items: center;
+            padding-top: 15px;
+            gap: 50px;
+        }
+        #lateral>#um{
+            display: grid;
+            background-color: #ff0000;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        #lateral>#dois{
+            display: grid;
+            background-color: hwb(130 45% 28%);
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        #lateral>#tres{
+            display: grid;
+            background-color: hsl(268, 58%, 70%);
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        #lateral>#quatro{
+            display: grid;
+            background-color: #ff0000;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        .dois{
+            grid-area: dois;
+            background-color: hsl(242, 47%, 68%);
+        }
+        .tres{
+            grid-area: tres;
+            background-color: orange;
+            margin-bottom: -6vh;
+        }
+        .quatro{
+            grid-area: quatro;
+            background-color: #bd81c9;
+        }
+        .cinco{
+            grid-area: cinco;
+            background-color: hwb(194 41% 16%);
+            margin-bottom: -6vh
+        }
+        .seis{
+            grid-area: seis;
+            background-color: hsl(19, 40%, 65%);
+        }
+        .sete{
+            grid-area: sete;
+            background-color: hwb(120 37% 35%);
+            margin-top: 6vh;
+        }
+        @media screen and (max-width: 500px), screen and (max-height: 400px) {
+
+        #container {
+            gap: 5px;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            grid-template-rows: 55px 1fr 1.3fr 0.8fr;
+            grid-template-areas:
+            "lateral lateral lateral"
+            "dois    dois    tres"
+            "quatro  cinco   tres"
+            "seis    sete    sete";
+            min-height: 320px;
+        }
+        #lateral {
+            grid-template-columns: repeat(4, 50px);
+            grid-template-rows: 50px;
+            justify-content: center;
+            padding-top: 0;
+            gap: 10px;
+        }
+        .tres, .cinco {
+            margin-bottom: -3vh;
+        }
+        .sete {
+            margin-top: 3vh;
+        }
+    }
+    </style>
+
+<body>
+
+    <div id="container">
+        <div id="lateral">
+            <div class="bolinha" id="um"></div>
+            <div class="bolinha" id="dois"></div>
+            <div class="bolinha" id="tres"></div>
+            <div class="bolinha" id="quatro"></div>
+        </div>
+        <div id="principal">
+            <div class="dois"></div>
+            <div class="tres"></div>
+            <div class="quatro"></div>
+            <div class="cinco"></div>
+            <div class="seis"></div>
+            <div class="sete"></div>
+        </div>
+    </div>
+
+</body>
+</html>

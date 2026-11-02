@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0px;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 60px 50px 1fr 1fr 50px 60px;
+            grid-template-areas:
+            "header header header"
+            "left   banner right"
+            "left   main   right"
+            "left   main   right"
+            "left   low    right"
+            "footer footer footer";
+            height: 100vh;
+            gap: 10px;
+        }
+        .header{
+            display: grid; 
+            grid-area: header; 
+            background-color: yellow; 
+            justify-content: center;
+        }
+        .banner { 
+            display: grid; 
+            grid-area: banner; 
+            background-color: red; 
+            justify-content: center;
+        }
+        .leftaside { 
+            display: grid; 
+            grid-area: left; 
+            background-color: green; 
+        }
+        .main { 
+            display: grid; 
+            grid-area: main; 
+            background-color: blue; 
+            justify-content: center;
+            align-items: center;
+        }
+        .rightasside { 
+            display: grid; 
+            grid-area: right; 
+            background-color: yellow; 
+            justify-content: center;
+        }
+        .lowcontent { 
+            display: grid; 
+            grid-area: low; 
+            background-color: green; 
+        }
+        .footer { 
+            display: grid; 
+            grid-area: footer; 
+            background-color: blue;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: 768px) {
+        body {
+            align-items: flex-start; 
+            padding: 10px 0;
+        }
+        #container {
+            width: 100%;
+            height: auto; 
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "header"
+            "banner"
+            "left"
+            "main"
+            "right"
+            "low"
+            "footer";
+            grid-template-rows: repeat(7, 80px);
+        }
+        .main {
+            min-height: auto; 
+        }
+    }
+    </style>
+
+</head>
+<body>
+    
+    <div id="container">
+        <div class="header">Header</div>
+        <div class="banner">Banner</div>
+        <div class="leftaside">Left Aside</div>
+        <div class="main">Main</div>
+        <div class="rightasside">Right Asside</div>
+        <div class="lowcontent">Low content</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>

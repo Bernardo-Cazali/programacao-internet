@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 - Perfil</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cv-container {
+            width: 750px;
+            background-color: white;
+            display: flex; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            width: 32%;
+            background-color: #3b4652;
+            color: white;
+            padding: 20px 15px;
+        }
+
+        .foto-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .foto {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .sidebar h3 {
+            font-size: 16px;
+            border-bottom: 1px solid #5a6877;
+            padding-bottom: 5px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        .sidebar .item {
+            margin-bottom: 12px;
+            font-size: 12px;
+        }
+
+        .sidebar .label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .sidebar .valor {
+            color: #d1d5db;
+            line-height: 1.3;
+        }
+
+        .conteudo {
+            width: 68%;
+            padding: 25px;
+            color: #333;
+        }
+
+        .conteudo h1 {
+            font-size: 26px;
+            color: #222;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .resumo {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .conteudo h2 {
+            font-size: 16px;
+            color: #222;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .experiencia-item {
+            margin-bottom: 20px;
+        }
+
+        .cargo-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .periodo {
+            color: #888;
+            font-weight: normal;
+        }
+
+        .empresa {
+            font-size: 12px;
+            font-style: italic;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .lista-tarefas {
+            padding-left: 18px;
+            font-size: 12px;
+            color: #555;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        
+        <div class="sidebar">
+            <div class="foto-container">
+                <img class="foto" src="user.png" alt="Foto Joana Barbosa">
+            </div>
+
+            <h3>Pessoal</h3>
+
+            <div class="item">
+                <span class="label">Nome</span>
+                <span class="valor">Joana Barbosa</span>
+            </div>
+
+            <div class="item">
+                <span class="label">Endereço</span>
+                <span class="valor">Rua da Paz, 250<br>7100-011 Lisboa</span>
+            </div>
+
+            <div class="item">
+                <span class="label">Número de telefone</span>
+                <span class="valor">9630002121</span>
+            </div>
+
+            <div class="item">
+                <span class="label">Email</span>
+                <span class="valor">exemplos@cvmaker.pt</span>
+            </div>
+
+            <h3>Interesses</h3>
+        </div>
+
+        <div class="conteudo">
+            <h1>Joana Barbosa</h1>
+
+            <p class="resumo">
+                Uma marketer digital com sentido de missão e com mais de três anos de experiência em conduzir iniciativas promocionais. Sou uma especialista em online marketing, lead generation e nurturing. Tenho uma comunicação exemplar, aptidões interpessoais e trabalho bem sobre pressão de forma a atingir os objetivos.
+            </p>
+
+            <h2>Experiência profissional</h2>
+
+            <div class="experiencia-item">
+                <div class="cargo-header">
+                    <span>Junior SEO Marketer</span>
+                    <span class="periodo">2017 - 2019</span>
+                </div>
+                <div class="empresa">Cyanca, Lisboa</div>
+                <ul class="lista-tarefas">
+                    <li>Página on/off SEO</li>
+                    <li>Estratégias de linkbuilding</li>
+                    <li>Criação de conteúdo relevante</li>
+                    <li>Trabalho com ferramentas online: Ahrefs, Google Analytics, Google Search Console, Google Adwords</li>
+                </ul>
+            </div>
+
+            <div class="experiencia-item">
+                <div class="cargo-header">
+                    <span>Assistente de Vendas</span>
+                    <span class="periodo">2015 - 2016</span>
+                </div>
+                <div class="empresa">Salsa, Lisboa</div>
+                <ul class="lista-tarefas">
+                    <li>Contribuição para os objetivos de vendas</li>
+                    <li>Gestão de inventário</li>
+                    <li>Apoio a clientes</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    *{
+        margin: 0;
+    }
+    #container{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+    #sub-container{
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+    }
+    #esquerda{
+        display: flex;
+        width: 250px;
+    }
+    #direita{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        background-color: black;
+        color: white;
+        height: 100px;
+    }
+    .navegacao{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        padding-top: 15px;
+        flex-grow: 1;
+        background-color: orange;
+        color: white;
+    }
+    .cabecalho{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        padding-top: 15px;
+        background-color: #00c3ff;
+        color: white;
+        height: 60px;
+    }
+    .conteudo{
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+        flex-grow: 1;
+        background-color: blueviolet;
+        color: white;
+    }
+    .rodape{
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+        background-color: #00c3ff;
+        color: white;
+        height: 60px;
+    }
+    .menu>.bolinha {
+        background-color: #00c3ff;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        margin-right: 10px;
+    }
+    </style>
+
+</head>
+<body>
+
+<div id="container">
+    <div class="menu">
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+    </div>
+        <div id="sub-container">
+            <div id="esquerda">
+                <div class="navegacao">Navegação</div>
+            </div>
+            <div id="direita">
+                <div class="cabecalho">Cabeçalho</div>
+                <div class="conteudo">Conteúdo</div>
+                <div class="rodape">Rodape</div>
+            </div>
+        </div>
+</div>
+
+</body>
+</html>

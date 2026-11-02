@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-chat</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .chat-container {
+            width: 380px;
+            height: 550px;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: #111;
+            position: relative; 
+            box-sizing: border-box;
+        }
+
+        .mensagens-area {
+            height: 380px;
+            overflow-y: auto; 
+            padding-right: 5px;
+        }
+
+        .mensagem {
+            margin-bottom: 15px;
+            clear: both; 
+        }
+
+        .nome {
+            font-size: 11px;
+            color: #888;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .esquerda {
+            float: left;
+            max-width: 75%;
+        }
+        .balao-cinza {
+            background-color: #222;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #333;
+            font-size: 14px;
+        }
+
+        .direita {
+            float: right;
+            max-width: 75%;
+        }
+        .balao-verde {
+            background-color: #0b3d0b;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #145214;
+            font-size: 14px;
+        }
+
+        .hora {
+            font-size: 10px;
+            color: #aaa;
+            text-align: right;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .caixa-envio {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            border: 1px solid #333;
+            padding: 10px;
+            border-radius: 6px;
+            background-color: #0d0d0d;
+        }
+
+        .caixa-envio textarea {
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            border: none;
+            color: white;
+            resize: none;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .caixa-envio button {
+            float: right;
+            background-color: #e1e1e1;
+            color: black;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="mensagens-area">
+            
+            <div class="mensagem esquerda">
+                <span class="nome">Pedro Silva</span>
+                <div class="balao-cinza">
+                    Olá, tudo bem?
+                    <span class="hora">00:50</span>
+                </div>
+            </div>
+
+            <div class="mensagem direita">
+                <span class="nome" style="text-align: right;">Eu</span>
+                <div class="balao-verde">
+                    Estou bem sim, e você?
+                    <span class="hora">00:55</span>
+                </div>
+            </div>
+
+            <div class="mensagem esquerda">
+                <span class="nome">Pedro Silva</span>
+                <div class="balao-cinza">
+                    Vamos sair hoje? sabe conversar e Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <span class="hora">01:01</span>
+                </div>
+            </div>
+
+        <div class="mensagem direita">
+            <span class="nome" style="text-align: right;">Eu</span>
+            <div class="balao-verde">
+                Criatura ......
+                <span class="hora">01:05</span>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="caixa-envio">
+            <textarea placeholder="Digite sua mensagem"></textarea>
+            <button>Enviar</button>
+        </div>
+    </div>
+
+</body>
+</html>

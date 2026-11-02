@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <li><a href="curriculo.html">Curriculo</a></li>
+
+    <hr>
+
+    
+    <nav>
+        <ol>
+            <li>Digite seu nome</li>
+            <li>Digite seu email</li>
+            <li>Escrever sobre o assunto a tratar</li>
+            <li>Selecionar o estado</li>
+            <li>Escrever uma mensagem detalhada</li>
+            <li>Clicar no botão "Enviar" para entregar o formulário</li>
+        </ol>
+    </nav>
+
+    <hr>
+
+    <form>
+        <p>
+        <label>Nome</label>
+        <input id="nome" type="text" placeholder="Digite seu nome" required>
+        </p>
+
+        <p>
+        <labe>Email</labe>
+        <input id="email" type="email" placeholder="Digite seu email" required>
+        </p>
+
+        <p>
+        <label>Assunto</label>
+        <input id="assunto" type="text" placeholder="Assunto...">
+        </p>
+        
+        <p>
+        <label for="estado">Selecione o Estado</label>
+        <select id="estado">
+        <option value="">Selecione...</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+        </select>
+        </p>
+
+
+        <p>
+        <label>Mensagem</label>
+        <input id="mensagem" type="text" placeholder="Mensagem...">
+        </p>
+
+        <p>
+            <button type="submit">Enviar</button>
+        </p>
+
+    </form>
+
+</body>
+</html>

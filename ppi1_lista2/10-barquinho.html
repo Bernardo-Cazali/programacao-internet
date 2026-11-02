@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barquinho no Mar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+        }
+
+        .cena {
+            width: 700px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #d4f1f9, #70c6ed); 
+            border: 2px solid #333;
+        }
+
+        .nuvem {
+            width: 120px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50px;
+            position: absolute;
+            top: 60px;
+            left: -150px;
+            opacity: 0.85;
+            animation: moverNuvem 12s linear infinite;
+        }
+
+        .nuvem::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            top: -25px;
+            left: 20px;
+        }
+
+        .nuvem::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            top: -15px;
+            left: 60px;
+        }
+
+        .mar {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 120px;
+            background-color: #3b5bfc;
+            z-index: 2; 
+        }
+
+        .mar::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            width: 100%;
+            height: 20px;
+            background: radial-gradient(circle, #5b79ff 10px, transparent 11px);
+            background-size: 30px 20px;
+        }
+
+        .container {
+            position: absolute;
+            bottom: 60px; 
+            left: -100px;
+            z-index: 5; 
+            animation: navegarBarco 10s linear infinite, balancarBarco 2s ease-in-out infinite alternate;
+        }
+
+        .barco-svg {
+            width: 90px;
+            height: 90px;
+        }
+
+        @keyframes moverNuvem {
+            0% {
+                left: -150px;
+            }
+            100% {
+                left: 800px;
+            }
+        }
+
+        @keyframes navegarBarco {
+            0% {
+                left: -100px;
+            }
+            100% {
+                left: 750px;
+            }
+        }
+
+        @keyframes balancarBarco {
+            0% {
+                transform: rotate(-3deg) translateY(0);
+            }
+            100% {
+                transform: rotate(4deg) translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cena">
+        <div class="nuvem"></div>
+
+        <div class="container">
+            <svg class="barco-svg" viewBox="0 0 100 100">
+                <path d="M15,65 Q50,90 85,65 L75,50 C60,55 40,55 25,50 Z" fill="white" stroke="black" stroke-width="3"/>
+                <path d="M45,45 L45,15 C65,30 65,40 45,45 Z" fill="#4da6ff" stroke="black" stroke-width="3"/>
+                <polygon points="45,12 35,17 45,22" fill="white" stroke="black" stroke-width="2"/>
+                <line x1="45" y1="48" x2="45" y2="10" stroke="black" stroke-width="3"/>
+            </svg>
+        </div>
+
+        <div class="mar"></div>
+    </div>
+
+</body>
+</html>

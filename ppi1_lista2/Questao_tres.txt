@@ -1,0 +1,15 @@
+3)
+
+CSS Externo: Criamos um ficheiro separado com a extensão .css e ligamo-lo ao HTML através da tag <link> dentro da secção <head>.
+
+<link rel="stylesheet" href="estilo.css">
+
+CSS Interno: O código CSS fica dentro do próprio ficheiro HTML, escrito dentro de uma tag <style> na secção <head>.
+
+<style>
+  body { background-color: lightgray; }
+</style>
+
+CSS Inline: O estilo é aplicado diretamente no elemento HTML usando o atributo style. (Geralmente evita-se usar muito, porque dificulta a organização).
+
+<p style="color: red; font-size: 18px;">Este texto tem estilo direto.</p>

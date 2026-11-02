@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    body {
+        margin: 0;
+        background-color: black;
+    }
+
+    p {
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        margin: 0;
+        color: white;
+    }
+
+    div.box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        font-weight: bold;
+    }
+
+    .bloco1 {
+        background-color: #ff9999;
+        top: 0;
+        left: 0;
+    }
+
+    .bloco2 {
+        background-color: #333300;
+        top: 0;
+        right: 0;
+    }
+
+    .bloco3 {
+        background-color: #5cd65c;
+        bottom: 0;
+        right: 0;
+    }
+
+    .bloco4 {
+        background-color: #e6e6ff;
+        bottom: 0;
+        left: 0;
+    }
+
+    .bloco5 {
+        background-color: #ff66ff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box bloco1">box1</div>
+    <div class="box bloco2">box2</div>
+    <div class="box bloco3">box3</div>
+    <div class="box bloco4">box4</div>
+    <div class="box bloco5">box5</div>
+
+    <!--Utilizamos o posicionamento absoluto (position: absolute) em cada elemento. Desta forma, o fluxo padrão da página é ignorado e conseguimos fixar cada bloco em coordenadas específicas da tela utilizando as propriedades top, bottom, left e right. O elemento central utiliza top: 50% e left: 50% combinado com transform: translate(-50%, -50%) para garantir o alinhamento no centro exato.-->
+
+</body>
+</html>

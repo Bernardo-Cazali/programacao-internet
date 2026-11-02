@@ -1,0 +1,33 @@
+4)
+
+/*regra 1*/ li{color:red;}
+
+apenas Li recebe a cor vermelha
+
+/*regra 2*/ .churras{color:green;}
+
+apenas a classe churras recebe  cor verde
+
+/*regra 3*/ .fruta{color:gray}
+
+apenas a classe fruta recebe cinza
+
+/*regra 4*/ li+li.churras{color: black;}
+
+apenas o li da classe churras que vem logo após outro li recebe preto
+
+/*regra 5*/ .churras[draggable="true"]{color: magenta;}
+
+apenas os itens da classe churras que são arrastáveis recebem magenta
+
+/*regra 6*/ #lip1,#lip2,#lip3{color:blue}
+
+apenas os Ids lip1, lip2 e lip3 recebem azul
+
+/*regra 7*/ #lip3.fruta{color:orange}
+
+apenas o id lip3 que tem a classe fruta recebe laranja
+
+/*regra 8*/ ol>li.churras#lip5{color:purple}
+
+apenas o item li da classe churras com o ID lip5 dentro de uma lista ordenada recebe roxo
